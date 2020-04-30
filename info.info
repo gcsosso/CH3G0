@@ -1,0 +1,24 @@
+conda create -n CH3G0 python=3.6
+conda activate CH3G0
+conda install -c conda-forge hoomd
+conda install -c conda-forge ase
+conda install matplotlib
+pip install nglview
+conda install jupyter
+Executing transaction: - b'Enabling notebook extension jupyter-js-widgets/extension...\n      - Validating: \x1b[32mOK\x1b[0m\n'
+pip install pytraj
+no
+
+pip uninstall nglview pytraj
+
+jupyter-nbextension enable nglview --py --sys-prefix
+jupyter labextension install  nglview-js-widgets
+
+conda remove --name CH3G0 --all
+
+*
+conda install -c conda-forge -c omnia -c michellab biosimspace
+jupyter-nbextension enable nglview --py --sys-prefix
+conda install -c conda-forge hoomd
+conda install -c conda-forge ase
+conda install -c ambermd pytraj
